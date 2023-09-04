@@ -10,9 +10,6 @@ function getComputerChoice() {
 	}
 }
 
-const computerSelection = getComputerChoice();
-const playerSelection = "rock";
-
 function playRound(playerSelection, computerSelection) {
 	if (playerSelection == computerSelection) {
 		console.log("Draw");
@@ -34,12 +31,21 @@ function playRound(playerSelection, computerSelection) {
 		(playerSelection == "scissors" && computerSelection == "paper")
 	) {
 		console.log(
-			"You Win! " +
-				playerSelection +
-				" beats " +
-				computerSelection
+			"You Win! " + playerSelection + " beats " + computerSelection
 		);
 	}
 }
 
-playRound(playerSelection, computerSelection);
+function game() {
+	for (let i = 0; i < 5; i++) {
+		const playerSelection = prompt(
+			"Enter your move. (rock, paper, scissors"
+		);
+		const computerSelection = getComputerChoice();
+
+		// playerSelection = prompt("Enter your move. (rock, paper, scissors");
+		playRound(playerSelection, computerSelection);
+	}
+}
+
+game();
