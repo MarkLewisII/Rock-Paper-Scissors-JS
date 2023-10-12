@@ -43,7 +43,6 @@ function game() {
 		);
 		const computerSelection = getComputerChoice();
 
-		// playerSelection = prompt("Enter your move. (rock, paper, scissors");
 		playRound(playerSelection, computerSelection);
 	}
 }
