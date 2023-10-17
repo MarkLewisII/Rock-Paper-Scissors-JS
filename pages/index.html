@@ -8,14 +8,16 @@
 		<script src="../scripts/script.js"></script>
 	</head>
 	<body>
+		<div id="scoreboard">
+			<div id="playerScore">Player : 0</div>
+			<div id="computerScore">Computer : 0</div>
+		</div>
 		<div>
-			<button onclick="playRound('rock')">Rock</button>
-			<button onclick="playRound('paper');">Paper</button>
-			<button onclick="playRound('scissors')">Scissors</button>
+			<button onclick="playRound('rock');" id="rockBttn">Rock</button>
+			<button onclick="playRound('paper');" id="paperBttn">Paper</button>
+			<button onclick="playRound('scissors');" id="scissorBttn">Scissors</button>
 		</div>
-		<div class="result">
-
-		</div>
-		
+		<div class="result"></div>
+		<div id="winner"></div>
 	</body>
 </html>
