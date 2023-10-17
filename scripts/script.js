@@ -10,9 +10,13 @@ function getComputerChoice() {
 	}
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection) {
+	let computerSelection = getComputerChoice();
+	let outcome = document.querySelector('.result');
+
 	if (playerSelection == computerSelection) {
-		console.log("Draw");
+		// console.log("Draw");
+		outcome.textContent = `Draw`;
 	}
 
 	if (
@@ -20,9 +24,10 @@ function playRound(playerSelection, computerSelection) {
 		(playerSelection == "paper" && computerSelection == "scissors") ||
 		(playerSelection == "scissors" && computerSelection == "rock")
 	) {
-		console.log(
-			"You Lose! " + computerSelection + " beats " + playerSelection
-		);
+		// console.log(
+		// 	"You Lose! " + computerSelection + " beats " + playerSelection
+		// );
+		outcome.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`;
 	}
 
 	if (
@@ -30,21 +35,22 @@ function playRound(playerSelection, computerSelection) {
 		(playerSelection == "paper" && computerSelection == "rock") ||
 		(playerSelection == "scissors" && computerSelection == "paper")
 	) {
-		console.log(
-			"You Win! " + playerSelection + " beats " + computerSelection
-		);
+		// console.log(
+		// 	"You Win! " + playerSelection + " beats " + computerSelection
+		// );
+		outcome.textContent = `You Win! ${playerSelection} beats ${computerSelection}`;
 	}
 }
 
-function game() {
-	for (let i = 0; i < 5; i++) {
-		const playerSelection = prompt(
-			"Enter your move. (rock, paper, scissors"
-		);
-		const computerSelection = getComputerChoice();
+// function game() {
+// 	for (let i = 0; i < 5; i++) {
+// 		const playerSelection = prompt(
+// 			"Enter your move. (rock, paper, scissors"
+// 		);
+// 		const computerSelection = getComputerChoice();
 
-		playRound(playerSelection, computerSelection);
-	}
-}
+// 		playRound(playerSelection, computerSelection);
+// 	}
+// }
 
-game();
+// game();
